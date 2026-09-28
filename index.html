@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class X English - Unit 1: Attitude Is Altitude (Bilingual Study Notes)</title>
+    <style>
+        :root {
+            --primary-color: #1a365d;
+            --secondary-color: #2b6cb0;
+            --accent-color: #3182ce;
+            --bg-color: #f7fafc;
+            --card-bg: #ffffff;
+            --text-color: #2d3748;
+            --telugu-color: #2c5282;
+            --border-radius: 8px;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        /* Ribbon & Navigation Menu */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .ribbon-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropbtn {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border: none;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .dropbtn:hover {
+            background-color: var(--accent-color);
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: var(--card-bg);
+            min-width: 250px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+        }
+
+        .dropdown-content a {
+            color: var(--text-color);
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            border-bottom: 1px solid #edf2f7;
+            font-size: 0.95rem;
+            transition: background 0.2s;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ebf8ff;
+            color: var(--secondary-color);
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        h1, h2, h3 {
+            color: var(--primary-color);
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-left: 5px solid var(--secondary-color);
+        }
+
+        .english-text {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        /* Toggle Button for Translation */
+        .translate-btn {
+            background-color: #e2e8f0;
+            color: #4a5568;
+            border: none;
+            padding: 8px 14px;
+            font-size: 0.9rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .translate-btn:hover {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        /* Telugu Box Style */
+        .telugu-box {
+            display: none;
+            background-color: #f0fff4;
+            border: 1px dashed #38a169;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 10px;
+            color: #22543d;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .telugu-box.show {
+            display: block;
+            animation: fadeIn 0.4s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Top Button */
+        #topBtn {
+            display: none;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 12px 16px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        #topBtn:hover {
+            background-color: var(--primary-color);
+            transform: scale(1.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--primary-color);
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Index Ribbon & Dropdown Menu -->
+    <header>
+        <div class="ribbon-container">
+            <div class="logo">Class X English - Unit 1 Notes</div>
+            <div class="dropdown">
+                <button class="dropbtn">Jump to Section ▼</button>
+                <div class="dropdown-content">
+                    <a href="#para1">1. Introduction & Phocomelia</a>
+                    <a href="#para2">2. Family & Independence</a>
+                    <a href="#para3">3. Struggle with Depression</a>
+                    <a href="#para4">4. Global Inspiration & Speaking</a>
+                    <a href="#vocabulary">5. Detailed Vocabulary Notes</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Content Sections -->
+    <div class="container">
+        
+        <!-- Paragraph 1 -->
+        <div id="para1" class="card">
+            <h2>Section 1: Born Without Limbs</h2>
+            <div class="english-text">
+                Nick Vujicic was born with no arms and legs - but he doesn’t let the details stop him. The brave 26-year-old — who is mainly a torso — plays football and golf, swims and surfs, despite having no limbs[cite: 1]. Nick has a small foot on his left hip which helps him balance and enables him to kick. He uses his one foot to type, write with a pen and pick things up between his toes[cite: 1].
+            </div>
+            <button class="translate-btn" onclick="toggleTranslation('tel1', this)">తెలుగు అనువాదం చూడండి (Show Telugu Translation)</button>
+            <div id="tel1" class="telugu-box">
+                <strong>తెలుగు భావము:</strong> నిక్ వుజిసిక్ చేతులు మరియు కాళ్లు లేకుండా జన్మించాడు - కానీ అతను ఆ చిన్న విషయాలను తనను ఆపడానికి అనుమతించడు. ప్రధానంగా మొండెం మాత్రమే కలిగి ఉన్న ఈ ధైర్యశాలస 26 ఏళ్ల యువకుడు - అవయవాలు లేకపోయినా ఫుట్‌బాల్, గోల్ఫ్ ఆడుతాడు, ఈదుతాడు మరియు సర్ఫింగ్ చేస్తాడు[cite: 1]. నిక్ తన ఎడమ తుంటిపై ఒక చిన్న పాదాన్ని కలిగి ఉన్నాడు, ఇది అతనికి సమతుల్యతను కాపాడుకోవడానికి మరియు తన్నడానికి సహాయపడుతుంది. అతను తన ఒక్క పాదాన్ని టైప్ చేయడానికి, కలంతో రాయడానికి మరియు తన కాలి వేళ్ల మధ్య వస్తువులను ఎత్తుకోవడానికి ఉపయోగిస్తాడు[cite: 1].<br><br>
+                <strong>ముఖ్యమైన పదాల తెలుగు అర్థాలు (Word Meanings):</strong>
+                <ul>
+                    <li><strong>Born (జన్మించిన):</strong> పుట్టిన</li>
+                    <li><strong>Arms (చేతులు):</strong> చేతులు</li>
+                    <li><strong>Legs (కాళ్లు):</strong> కాళ్లు</li>
+                    <li><strong>Torso (మొండెం):</strong> తల, చేతులు, కాళ్లు మినహాయించి శరీరం యొక్క ప్రధాన భాగం[cite: 1]</li>
+                    <li><strong>Play (ఆడుట):</strong> ఆడుట</li>
+                    <li><strong>Swims (ఈదుట):</strong> ఈదుట</li>
+                    <li><strong>Surfs (సర్ఫ్ చేయుట):</strong> అలల మీద స్వారీ చేయుట[cite: 1]</li>
+                    <li><strong>Balance (సమతుల్యత):</strong> బ్యాలెన్స్ కాపాడుకోవడం</li>
+                    <li><strong>Type (టైప్ చేయుట):</strong> కీబోర్డ్ పై అక్షరాలు కొట్టుట</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Paragraph 2 -->
+        <div id="para2" class="card">
+            <h2>Section 2: Family Support & Mainstream Schooling</h2>
+            <div class="english-text">
+                Despite the risk of being bullied, his parents insisted Nick on attending mainstream school. 'It was the best decision they could have made for me,' adds Nick, who later achieved a degree in Financial Planning and Real Estate[cite: 1]. Nick, who was teased and bullied, had an electric wheelchair for mobility, and a team of carers to help him[cite: 1].
+            </div>
+            <button class="translate-btn" onclick="toggleTranslation('tel2', this)">తెలుగు అనువాదం చూడండి (Show Telugu Translation)</button>
+            <div id="tel2" class="telugu-box">
+                <strong>తెలుగు భావము:</strong> వేధింపులకు గురవుతాడనే భయం ఉన్నప్పటికీ, అతని తల్లిదండ్రులు నిక్‌ను సాధారణ పాఠశాలకే పంపాలని పట్టుబట్టారు. "అది నాకోసం వారు తీసుకోగల అత్య ఉత్తమ నిర్ణయం" అని నిక్ జతచేసాడు, అతను తరువాత ఫైనాన్షియల్ ప్లానింగ్ మరియు రియల్ ఎస్టేట్‌లో డిగ్రీని సాధించాడు[cite: 1]. ఏడిపించబడిన మరియు వేధించబడిన నిక్, చలనశీలత కోసం ఎలక్ట్రిక్ వీల్‌చైర్‌ను మరియు అతనికి సహాయం చేయడానికి సంరక్షకుల బృందాన్ని కలిగి ఉన్నాడు[cite: 1].<br><br>
+                <strong>ముఖ్యమైన పదాల తెలుగు అర్థాలు (Word Meanings):</strong>
+                <ul>
+                    <li><strong>Risk (ప్రమాదం/భయం):</strong> రిస్క్</li>
+                    <li><strong>Bullied (వేధించబడిన):</strong> ఇతరుల చేతిలో హింసించబడిన లేదా భయపెట్టబడిన</li>
+                    <li><strong>Mainstream (సాధారణ/ప్రధాన స్రవంతి):</strong> ప్రత్యేక పాఠశాల కాకుండా సాధారణ పాఠశాల</li>
+                    <li><strong>Degree (పట్టా):</strong> ఉన్నత విద్య పూర్తి చేశాక లభించే డిగ్రీ</li>
+                    <li><strong>Mobility (చలనశీలత/కదలిక):</strong> ఒక చోటు నుండి మరొక చోటుకు కదలగలగడం</li>
+                    <li><strong>Carers (సంరక్షకులు):</strong> సహాయం చేసే వ్యక్తులు</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Paragraph 3 -->
+        <div id="para3" class="card">
+            <h2>Section 3: Overcoming Depression</h2>
+            <div class="english-text">
+                'I was deeply depressed when I was eight years old,' he said. 'I went to my mum crying and told her I wanted to kill myself.' 'I felt cold and bitter. I hated God for doing this to me and was terrified of what would happen when my parents weren't there to look after me[cite: 1].'
+            </div>
+            <button class="translate-btn" onclick="toggleTranslation('tel3', this)">తెలుగు అనువాదం చూడండి (Show Telugu Translation)</button>
+            <div id="tel3" class="telugu-box">
+                <strong>తెలుగు భావము:</strong> "నాకు ఎనిమిడేళ్ల వయసున్నప్పుడు నేను తీవ్రమైన నిరాశకు గురయ్యాను" అని ఆయన చెప్పారు. "నేను ఏడుస్తూ మా అమ్మ దగ్గరికి వెళ్లి నన్ను నేను చంపుకోవాలనుకుంటున్నానని చెప్పాను." "నాలో చల్లదనం, చేదు భావాలు నిండిపోయాయి. నాకీ పరిస్థితి తెచ్చినందుకు నేను దేవుడిని అసహ్యించుకున్నాను మరియు నన్ను చూసుకోవడానికి మా తల్లిదండ్రులు లేనప్పుడు ఏమి జరుగుతుందోనని భయపడ్డాను[cite: 1]."<br><br>
+                <strong>ముఖ్యమైన పదాల తెలుగు అర్థాలు (Word Meanings):</strong>
+                <ul>
+                    <li><strong>Depressed (నిరాశచెందిన/కుంగిపోయిన):</strong> తీవ్రమైన మనోవేదన</li>
+                    <li><strong>Crying (ఏడుస్తూ):</strong> కన్నీరు పెట్టుకోవడం</li>
+                    <li><strong>Kill (చంపుకొనుట):</strong> ఆత్మహత్య చేసుకోవడం</li>
+                    <li><strong>Bitter (చేదు/కఠినమైన):</strong> మనసులో బాధ లేదా అసంతృప్తి</li>
+                    <li><strong>Hated (అసహ్యించుకొనెను):</strong> ఇష్టపడకపోవడం</li>
+                    <li><strong>Terrified (భయభ్రాంతుడైన):</strong> చాలా భయపడటం</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Paragraph 4 -->
+        <div id="para4" class="card">
+            <h2>Section 4: Global Inspiration and Life Purpose</h2>
+            <div class="english-text">
+                He has visited different countries all over the world. The football fan is now a motivational speaker and has travelled over 24 countries speaking to groups of up to 110,000 people. "If I fail, I try again, and again, and again. If you fail, are you going to try again? The human spirit can handle much worse than we realize[cite: 1]."
+            </div>
+            <button class="translate-btn" onclick="toggleTranslation('tel4', this)">తెలుగు అనువాదం చూడండి (Show Telugu Translation)</button>
+            <div id="tel4" class="telugu-box">
+                <strong>తెలుగు భావము:</strong> అతను ప్రపంచవ్యాప్తంగా వివిధ దేశాలను సందర్శించాడు. ఆ ఫుట్‌బాల్ అభిమాని ఇప్పుడు ఒక మోటివేషనల్ స్పీకర్ (ప్రేరణాత్మక వక్త) అయ్యాడు మరియు 24 దేశాలకు పైగా ప్రయాణించి 110,000 మంది వరకు ఉన్న సమూహాలతో మాట్లాడాడు. "నేను విఫలమైతే, నేను మళ్లీ, మళ్లీ, మళ్లీ ప్రయత్నిస్తాను. మీరు విఫలమైతే, మీరు మళ్లీ ప్రయత్నించబోతున్నారా? మానవ ఆత్మ మనం ఊహించినదానికంటే చాలా అధ్వాన్నమైన పరిస్థితులను ఎదుర్కొగలదు[cite: 1]."<br><br>
+                <strong>ముఖ్యమైన పదాల తెలుగు అర్థాలు (Word Meanings):</strong>
+                <ul>
+                    <li><strong>Visited (సందర్శించిన):</strong> వెళ్ళి చూసిరావడం</li>
+                    <li><strong>Motivational Speaker (ప్రేరణాత్మక వక్త):</strong> ఇతరులలో ఉత్సాహాన్ని నింపే ప్రసంగాలు చేసే వ్యక్తి</li>
+                    <li><strong>Travelled (ప్రయాణించిన):</strong> ఒకచోటు నుండి మరొక చోటుకు వెళ్లడం</li>
+                    <li><strong>Fail (విఫలమగుట):</strong> ఓడిపోవడం</li>
+                    <li><strong>Human spirit (మానవ ఆత్మ/ధైర్యం):</strong> మనిషి యొక్క మనోధైర్యం</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Vocabulary Explanation Section -->
+        <div id="vocabulary" class="card">
+            <h2>Detailed Key Vocabulary Explanations</h2>
+            <div class="english-text">
+                Reviewing critical vocabulary terms from Unit 1 that build a strong foundation for understanding personality development themes.
+            </div>
+            <button class="translate-btn" onclick="toggleTranslation('tel-vocab', this)">తెలుగు అనువాదం చూడండి (Show Telugu Translation)</button>
+            <div id="tel-vocab" class="telugu-box">
+                <strong>తెలుగు భావము:</strong> వ్యక్తిత్వ వికాస థీమ్‌లను అర్థం చేసుకోవడానికి బలమైన ఆధారాన్ని అందించే యూనిట్ 1 నుండి కీలకమైన పదజాల నిబంధనలను సమీక్షించడం.<br><br>
+                <strong>ముఖ్యమైన పదాల వివరణ (Key Vocabulary Breakdown):</strong>
+                <ul>
+                    <li><strong>Phocomelia (ఫోకోమెలియా):</strong> A birth defect where limbs are extremely underdeveloped or absent entirely (అవయవాలు పూర్తిగా అభివృద్ధి చెందకుండా పుట్టే అరుదైన వైద్య పరిస్థితి)[cite: 1].</li>
+                    <li><strong>Adversity (ప్రतिकూలత/కష్టాలు):</strong> A state or instance of serious or continued difficulty or misfortune (జీవితంలో ఎదురయ్యే తీవ్రమైన ఇబ్బందులు లేదా కష్టకాలం)[cite: 1].</li>
+                    <li><strong>Perseverance (పట్టుదల):</strong> Persistence in doing something despite difficulty or delay in achieving success (ఎన్ని అడ్డంకులు ఎదురైనా లక్ష్యం వైపు నిలకడగా సాగే పట్టుదల)[cite: 1].</li>
+                    <li><strong>Distraught (కలత చెందిన):</strong> Deeply upset and agitated, usually due to emotional stress or shocking news (తీవ్రమైన మనోవేదన లేదా ఆందోళనతో కలత చెందడం)[cite: 1].</li>
+                    <li><strong>Convictions (గట్టి నమ్మకాలు):</strong> A firmly held belief or opinion about core principles (మనసారా నమ్మే సిద్ధాంతాలు లేదా బలమైన విశ్వాసాలు)[cite: 1].</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Top Button -->
+    <button onclick="topFunction()" id="topBtn" title="Go to top">Top ⇧</button>
+
+    <footer>
+        <p>&copy; 2026 Class X English Bilingual Learning Collaborator. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Toggle Telugu Translation Box Functionality
+        function toggleTranslation(id, btn) {
+            const box = document.getElementById(id);
+            if (box.classList.contains('show')) {
+                box.classList.remove('show');
+                btn.innerText = "తెలుగు అనువాదం చూడండి (Show Telugu Translation)";
+            } else {
+                box.classList.add('show');
+                btn.innerText = "అనువాదాన్ని దాచు (Hide Telugu Translation)";
+            }
+        }
+
+        // Scroll to Top Button Functionality
+        let mybutton = document.getElementById("topBtn");
+
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+</html>
